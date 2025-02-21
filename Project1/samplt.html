@@ -1,0 +1,44 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Card Number:</label>
+      <input type="text" formControlName="cardNumber" data-test-id="number-input" />
+      <span *ngIf="isFieldInvalid('cardNumber')" data-test-id="number-input-error">
+        Invalid Card Number
+      </span>
+    </div>
+  
+    <div>
+      <label>Cardholder Name:</label>
+      <input type="text" formControlName="cardholderName" data-test-id="name-input" />
+      <span *ngIf="isFieldInvalid('cardholderName')" data-test-id="name-input-error">
+        Invalid Cardholder Name
+      </span>
+    </div>
+  
+    <div>
+      <label>Expiration Month:</label>
+      <input type="number" formControlName="expirationMonth" data-test-id="month-input" />
+      <span *ngIf="isFieldInvalid('expirationMonth')" data-test-id="month-input-error">
+        Invalid Month
+      </span>
+    </div>
+  
+    <div>
+      <label>Expiration Year:</label>
+      <input type="number" formControlName="expirationYear" data-test-id="year-input" />
+      <span *ngIf="isFieldInvalid('expirationYear')" data-test-id="year-input-error">
+        Invalid Year
+      </span>
+    </div>
+  
+    <div>
+      <label>CVV:</label>
+      <input type="text" formControlName="cvv" data-test-id="cvv-input" />
+      <span *ngIf="isFieldInvalid('cvv')" data-test-id="cvv-input-error">
+        Invalid CVV/CVC
+      </span>
+    </div>
+  
+    <button type="submit" [disabled]="cardForm.invalid" data-test-id="submit-button">Submit</button>
+  </form>
+  
