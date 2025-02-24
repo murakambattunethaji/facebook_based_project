@@ -128,7 +128,7 @@ const EventForm: React.FC<EventFormProps> = ({
           id="rootPoster2-upload"
           onChange={(e) => handleImageChange(e, setRootPoster2)}
           className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-        />
+        />  
         {rootPoster2 && <img src={rootPoster2} alt="Root Poster 2" className="mt-2 w-20 h-20 object-cover" />}
       </div>
 
