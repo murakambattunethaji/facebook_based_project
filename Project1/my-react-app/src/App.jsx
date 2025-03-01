@@ -1,17 +1,11 @@
-import { useState } from 'react'
-import { BrowserRouter, Router, Routes } from 'react-router-dom'
-import './App.css'
-import AdminHeader from './AdminHeader'
-import Dashboard from './Components/Dashboard/Dashboard'
 
+import { AdminHeader } from './AdminHeader'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-   
-        <AdminHeader />
-        <Dashboard/>
+   <AdminHeader/>
+        
     </>
   )
 }
